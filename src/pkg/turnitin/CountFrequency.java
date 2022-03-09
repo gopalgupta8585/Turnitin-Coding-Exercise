@@ -19,11 +19,10 @@ public class CountFrequency {
             if(map.containsKey(arrOfStrings[i])){
                 map.put(arrOfStrings[i], map.get(arrOfStrings[i])+1);
                 queue.remove(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
-                queue.add(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
             }else{
                 map.put(arrOfStrings[i], 1);
-                queue.add(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
             }
+            queue.add(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
         }
         
         Iterator<String> iterator = queue.iterator();
