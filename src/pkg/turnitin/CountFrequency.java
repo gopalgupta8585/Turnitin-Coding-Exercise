@@ -17,8 +17,9 @@ public class CountFrequency {
         for(int i=0;i<arrOfStrings.length;i++){
             
             if(map.containsKey(arrOfStrings[i])){
+            	queue.remove(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
                 map.put(arrOfStrings[i], map.get(arrOfStrings[i])+1);
-                queue.remove(map.get(arrOfStrings[i])+" "+arrOfStrings[i]);
+                
             }else{
                 map.put(arrOfStrings[i], 1);
             }
